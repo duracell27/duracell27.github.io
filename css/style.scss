@@ -3,7 +3,6 @@
 *::before {
   box-sizing: border-box;
   font-family: "Oswald", sans-serif;
-  
 }
 .fas::before,
 .far::before {
@@ -73,11 +72,10 @@
 .education,
 .languages,
 .works {
-    color: rgb(26, 1, 85);
+  color: rgb(26, 1, 85);
   padding: 20px;
   &__container {
     display: flex;
-   
   }
 }
 
@@ -110,6 +108,7 @@
     padding: 0;
     list-style-type: none;
     display: flex;
+    flex-wrap: wrap;
   }
   &__item {
     border: 1px solid rgb(26, 1, 85);
@@ -119,6 +118,10 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 7px;
+    margin-right: 7px;
+    // &:first-child{
+    //   margin-right: 0;
+    // }
     &--big {
       font-size: 20px;
     }
@@ -129,9 +132,9 @@
       font-size: 13px;
     }
   }
-  &__item + &__item {
-    margin-left: 7px;
-  }
+  // &__item + &__item {
+  //   margin-right: 7px;
+  // }
 }
 
 .experience {
@@ -198,49 +201,131 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 7px;
-    i:last-child{
-        margin-right: 10px;
+    i:last-child {
+      margin-right: 10px;
     }
   }
 }
 
-.works{
-    &-list{
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        &__technologies{
-            display: flex;
-            align-items: baseline;
-            p{
-                line-height: 36px;
-                margin-right: 10px;
-            }
-            span{
-                margin-right: 10px;
-            }
-        }
-        &__item{
-            margin-bottom: 20px;
-            .h4{
-                margin-bottom: 10px;
-                a{
-                    color: rgb(26, 1, 85);
-                }
-            }
-        }
-        &__gallery{
-            .h5{
-                margin-bottom: 10px;
-                
-            }
-            border-bottom: 2px solid rgb(26, 1, 85);
-            a{
-              img{
-
-                margin-bottom: 20px;
-              }
-            }
-        }
+.works {
+  &-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    &__technologies {
+      display: flex;
+      align-items: baseline;
+      p {
+        line-height: 22px;
+        margin-right: 10px;
+      }
+      span {
+        margin-right: 10px;
+      }
     }
+    &__item {
+      margin-bottom: 20px;
+      .h4 {
+        margin-bottom: 10px;
+        a {
+          color: rgb(26, 1, 85);
+        }
+      }
+    }
+    &__gallery {
+      .h5 {
+        margin-bottom: 10px;
+      }
+      border-bottom: 2px solid rgb(26, 1, 85);
+      a {
+        img {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 900px;
+  }
+
+  .section__title {
+    width: 260px;
+    max-width: 260px;
+    p {
+      width: 260px;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    width: 600px;
+  }
+
+  .section__title {
+    width: 200px;
+    max-width: 200px;
+    p {
+      width: 200px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 500px;
+  }
+
+  .section__title {
+    width: 150px;
+    max-width: 150px;
+    p {
+      width: 150px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  .header{
+    &__container{
+      flex-wrap: wrap;
+    }
+    &__img{
+      margin: 20px;
+      margin-bottom: 0;
+    }
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .contacts,
+  .about,
+  .skills,
+  .experience,
+  .education,
+  .languages,
+  .works {
+    padding: 10px;
+    &__container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .section__title {
+    display: block;
+    width: 100%;
+    max-width: none;
+    p {
+      display: block;
+      width: 100%;
+      padding-bottom: 10px;
+    }
+  }
 }
